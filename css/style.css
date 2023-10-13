@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap');
+
+/* CSS RESET START */
+
+* {
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+user-select: none;
+}
+
+
+html {
+font-family: 'Roboto Mono', monospace;
+font-size: 0.625rem;
+background-color: lightslategray;
+}
+
+
+body {
+font-size: 1.6rem;
+
+}
+
+/* CSS RESET END */
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.todoList{
+    width: 80vw;
+    height: 80vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-size: 36px;
+    background-color: hsl(210, 14%, 60%);
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px grey;
+}
+
+.todoList-inner{
+    width: 100%;
+    margin-top: 50px;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+.list{
+    cursor: pointer;
+    color: rgb(59, 59, 59);
+    font-weight: 300;
+}
+
+input[type="text"]{
+    width: 100%;
+    border: none;
+    background-color: hsl(210, 14%, 70%);
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 20px;
+    color: azure;
+}
+
+input[type="text"]:focus{
+    outline: none;
+}
+
+::placeholder{
+    color: azure;
+    opacity: 1;
+}
+
+button{
+    width: 100%;
+    border: none;
+    background-color: hsl(120, 39%, 44%);
+    border-radius: 20px;
+    padding: 8px 10px;
+    cursor: pointer;
+    color: azure;
+}
+
+button:hover{
+    background-color: hsl(120, 39%, 60%);;
+}
+
+.delete-btn{
+    background-color: rgb(185, 54, 54);
+}
+
+.delete-btn:hover{
+    background-color: hsl(0, 55%, 63%);
+}
+
+.input{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tick {
+    display: inline-block;
+    transform: rotate(45deg);
+    height: 25px;
+    width: 12px;
+    margin-left: 60%; 
+    border-bottom: 7px solid #78b13f;
+    border-right: 7px solid #78b13f;
+  }
+
+  .hover:hover{
+    color: red;
+  }
+
+  .grey{
+    color: rgb(59, 59, 59);
+  }
+
+  .green{
+    color: green;
+  }
+
+  h1{
+    color: azure;
+    text-shadow: 0px 5px 10px grey;
+  }
+
+  .removeEffect{
+    animation: 3s ani;
+  }
+
+  @keyframes ani{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+  }
+
+  .deleteEffect{
+    animation: infinite 4s delani;
+  }
+
+  @keyframes delani{
+    0%{
+        box-shadow: 0px 0px 10px hsl(39, 100%, 50%);
+    }
+    25%{
+        box-shadow: 0px 0px 10px hsl(39, 100%, 40%);
+    }
+    50%{
+        box-shadow: 0px 0px 10px hsl(39, 100%, 60%);
+    }
+    75%{
+        box-shadow: 0px 0px 10px hsl(39, 100%, 40%);
+    }
+    100%{
+        box-shadow: 0px 0px 10px hsl(39, 100%, 50%);
+    }
+  }
